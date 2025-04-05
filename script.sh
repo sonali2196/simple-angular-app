@@ -11,4 +11,5 @@ echo "==========================Simpleangularapp container has been removed=====
 echo "admin" | sudo -S docker run -d --name simpleangularapp -p 80:80 simple-angular-app:latest
 echo "\n"
 echo "==========================Simpleangularapp container is running now=========================="
-
+echo "admin" | sudo -S docker tag simple-angular-app:latest 822642595439.dkr.ecr.ap-south-2.amazonaws.com/simple-angular-app:latest
+echo "admin" | sudo -S docker push 822642595439.dkr.ecr.ap-south-2.amazonaws.com/simple-angular-app:latest
