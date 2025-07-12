@@ -2,9 +2,9 @@ pipeline {
     agent any
     
     environment {
-        GITURL = "https://github.com/evisiondevops/simple-angular-app.git"
-        GITBRANCH = "main"
-        GITCREDENTIALS_ID = "evisiondevops"
+        // GITURL = "https://github.com/evisiondevops/simple-angular-app.git"
+        // GITBRANCH = "main"
+        // GITCREDENTIALS_ID = "evisiondevops"
         IMAGE_NAME = "simple-angular-app"
         CONTAINER_NAME = "simple-angular-app"
         DOCKER_REGISTRY = "dockerhub"
@@ -14,13 +14,13 @@ pipeline {
     }
     
     stages {
-        stage('Clone Repository') {
-            steps {
-                git credentialsId: "$GITCREDENTIALS_ID", 
-                    branch: "$GITBRANCH", 
-                    url: "$GITURL"
-            }
-        }
+        // stage('Clone Repository') {
+        //     steps {
+        //         git credentialsId: "$GITCREDENTIALS_ID", 
+        //             branch: "$GITBRANCH", 
+        //             url: "$GITURL"
+        //     }
+        // }
         
         stage('Build and Push Docker Image') {
             steps {
