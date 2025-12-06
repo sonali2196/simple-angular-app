@@ -1,4 +1,4 @@
-# Stage 1: Build the Angular application
+# Stage 1: Build the Angular application.
 FROM node:18 AS build
 
 # Set the working directory in the container
@@ -27,3 +27,4 @@ EXPOSE 80
 
 # Start Nginx
 CMD ["nginx", "-g", "daemon off;"]
+#Adding new project into git hub repo
